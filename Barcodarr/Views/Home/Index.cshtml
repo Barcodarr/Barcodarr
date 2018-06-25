@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<form id="radarrForm">
+    <div class="form-group">
+        <label for="radarrUrl">Radarr Url</label>
+        <input type="text" class="form-control" id="radarrUrl" placeholder="Radarr Url">
+        <small id="radarrUrlHelp" class="form-text text-muted">Full Radarr Url you use to view your site.</small>
+    </div>
+    <div class="form-group">
+        <label for="radarrApiKey">Radarr ApiKey</label>
+        <input type="text" class="form-control" id="radarrApiKey" placeholder="Radarr ApiKey">
+        <small id="radarrApiKeyHelp" class="form-text text-muted">Radarr Api Key, this is never transmitted to us, only used by your browser to talk to Radarr</small>
+    </div>
+    <div class="form-group">
+        <label for="radarrQuality">Select Quality</label>
+        <div class="input-group">
+            <select class="form-control" id="radarrQuality"></select>
+            <span class="input-group-append">
+                <button type="button" class="btn btn-primary" id="radarrQualityGet">Fetch</button>
+            </span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="radarrFolder">Select Folder</label>
+        <div class="input-group">
+            <select class="form-control" id="radarrFolder"></select>
+            <span class="input-group-append">
+                <button type="button" class="btn btn-primary" id="radarrFolderGet">Fetch</button>
+            </span>
+        </div>
+    </div>
+
+</form>
+<div class="clearfix">&nbsp;</div>
+<div id="interactive" class="viewport"></div>
+<div class="clearfix">&nbsp;</div>
+<div id="result_strip" class="row d-flex flex-wrap">
+</div>
+
+@section Scripts {
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/quagga/0.12.1/quagga.min.js" type="text/javascript"></script>
+    <script src="https://serratus.github.io/quaggaJS/javascripts/scale.fix.js"></script>
+    <environment include="Development">
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+
+    <environment exclude="Development">
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+}

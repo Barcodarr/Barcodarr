@@ -1,0 +1,5 @@
+#Custom Ignores
+wwwroot/css/*.min.css
+wwwroot/js/*.min.js
+wwwroot/lib
+barcodes.db
