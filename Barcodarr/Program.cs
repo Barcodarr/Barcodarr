@@ -23,7 +23,6 @@ namespace Barcodarr
 
         }
 
-        public static IConfiguration Configuration;
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
