@@ -352,7 +352,7 @@ $(function () {
             radarrUrl = $('#radarrUrl').val();
             $.ajax({
                 method: "GET",
-                url: "api/Amazon",
+                url: "api/barcode",
                 data: { barcode: code }
             }).done(function (data) {
                 if (data !== undefined) {
