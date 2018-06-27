@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
     <UserSecretsId>78ce76c2-acb6-47aa-9859-15fb1e751103</UserSecretsId>
     <AssemblyName>Barcodarr</AssemblyName>
   </PropertyGroup>
@@ -13,6 +13,7 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite.Core" Version="2.1.1" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.3" />
     <PackageReference Include="Nager.AmazonProductAdvertising" Version="1.2.1" />
+    <PackageReference Include="RestSharp" Version="106.3.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,6 +22,10 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Esendex.TokenBucket\Esendex.TokenBucket.csproj" />
   </ItemGroup>
 
 </Project>

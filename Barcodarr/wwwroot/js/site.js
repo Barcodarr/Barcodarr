@@ -375,7 +375,7 @@ $(function () {
 
             $node = $('<div class="col-6 film"><img class="img-fluid" src="" /><h4></h4><span class="json" style="display:none;"></span></div>')
 
-            if (films[i].remotePoster == 'http://image.tmdb.org/t/p/original') {
+            if (films[i].remotePoster === 'http://image.tmdb.org/t/p/original') {
                 $node.find("img").attr("src", radarrUrl + noPoster);
             } else {
                 $node.find("img").attr("src", films[i].remotePoster.replace('http:', '').replace('https:', ''));    
