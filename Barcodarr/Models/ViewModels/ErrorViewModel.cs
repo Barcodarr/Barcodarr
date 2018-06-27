@@ -1,6 +1,6 @@
 using System;
 
-namespace Barcodarr.Models
+namespace Barcodarr.Models.ViewModels
 {
     public class ErrorViewModel
     {
