@@ -21,7 +21,7 @@ namespace Barcodarr.Controllers
         [Route("api/amazon/{barcode}")]
         public BarcodeModel GetBarcode(String barcode)
         {
-            var barcodeContext = new BarcodeContext();
+            var barcodeContext = new GlobalDatabaseContext();
             var barcodeDb = barcodeContext.Barcodes.FirstOrDefault(q => q.Barcode == barcode);
 
             if (barcodeDb == null)

@@ -17,7 +17,7 @@ namespace Barcodarr
         public static void Main(string[] args)
         {
 
-            new Models.BarcodeContext().Database.EnsureCreated();
+            Models.GlobalDatabaseContext.GetDatabaseContext();
 
             BuildWebHost(args).Run();
 
